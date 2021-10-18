@@ -1,0 +1,12 @@
+#header_wrap {
+    background-color: #333;
+    
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+
+#logo {
+    width: 200px;
+    margin: 30px;
+}

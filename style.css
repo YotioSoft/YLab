@@ -1,0 +1,10 @@
+body {
+    margin: 0;
+    text-align: center;
+}
+
+#wrap {
+    width: 100%;
+    max-width: 1200px;
+    text-align: left;
+}
