@@ -24,6 +24,7 @@ body {
 }
 
 header {
+    width: 100%;
     height: fit-content;
     margin-bottom: 50px;
 }
