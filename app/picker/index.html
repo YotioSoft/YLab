@@ -1,0 +1,28 @@
+<html>
+<head>
+	<title>YotioSoft Sandbox</title>
+
+	<script src="./js/img_transparent.js"></script>
+</head>
+<body>
+	画像アップロードテスト<br>
+	<input type="file" id="imgfile" accept=".png, .jpg, .jpeg">
+
+	<script>
+		// input要素
+		const fileInput = document.getElementById('imgfile');
+		// changeイベントで呼び出す関数
+		const handleFileSelect = () => {
+			const files = fileInput.files;
+			for (let i = 0; i < files.length; i++) {
+				console.log(files[i]+"\n");　// 1つ1つのファイルデータはfiles[i]で取得できる
+				previewFile(files[i]);
+			}
+		}
+		// ファイル選択時にhandleFileSelectを発火
+		fileInput.addEventListener('change', handleFileSelect);
+	</script>
+
+	<canvas id="preview"></canvas>
+</body>
+</html>

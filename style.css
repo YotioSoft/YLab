@@ -1,10 +1,73 @@
 body {
+    font-family: "ヒラギノ角ゴシック W2","Hiragino Kaku Gothic W2","HiraginoSans-W2","ヒラギノ角ゴシック","Hiragino Kaku Gothic",
+                    "Arial",
+                    "Noto Sans CJK JP",
+                    "Segoe UI",
+                    Roboto,
+                    "YuGothic", YuGothic,
+                    "Hiragino Sans",
+                    "メイリオ", Meiryo,
+                    "VL PGothic",
+                    "Droid Sans Japanese", "Droid Sans",
+                    "Takaoゴシック","TakaoGothic",
+                    "ＭＳ Ｐゴシック", "MS PGothic",
+                    "Nunito Sans",
+                    sans-serif;
+
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+
     margin: 0;
-    text-align: center;
+    background-color: #333;
+    color: #FFF;
+}
+
+header {
+    margin-bottom: 50px;
+}
+
+p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+a {
+    text-decoration: none;
+    color: #FFF;
 }
 
 #wrap {
+    overflow: hidden;
+
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 120px;
+    box-sizing: border-box;
+}
+
+#contents-wrap {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0px auto;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.column {
     width: 100%;
-    max-width: 1200px;
-    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+}
+.column .title {
+    width: 100%;
+    
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 26px;
+}
+.column .title img {
+    height: 48px;
+    margin-right: 20px;
 }
