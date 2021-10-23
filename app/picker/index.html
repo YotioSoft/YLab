@@ -1,28 +1,61 @@
 <html>
-<head>
-	<title>YotioSoft Sandbox</title>
+    <head>
+        <meta charset="utf8">
+        <title>YLab</title>
+        <link rel="icon" type="image/png" href="../../img/icon.png">
 
-	<script src="./js/img_transparent.js"></script>
-</head>
-<body>
-	画像アップロードテスト<br>
-	<input type="file" id="imgfile" accept=".png, .jpg, .jpeg">
+        <link rel="stylesheet" href="../../style.css">
+        <link rel="stylesheet" href="../../box.css">
+		<link rel="stylesheet" href="../../app-page.css">
+		<link rel="stylesheet" href="./picker.css">
 
-	<script>
-		// input要素
-		const fileInput = document.getElementById('imgfile');
-		// changeイベントで呼び出す関数
-		const handleFileSelect = () => {
-			const files = fileInput.files;
-			for (let i = 0; i < files.length; i++) {
-				console.log(files[i]+"\n");　// 1つ1つのファイルデータはfiles[i]で取得できる
-				previewFile(files[i]);
-			}
-		}
-		// ファイル選択時にhandleFileSelectを発火
-		fileInput.addEventListener('change', handleFileSelect);
-	</script>
+        <script src="../../js/jquery-3.5.1.min.js"></script>
+        <script src="../../js/common.js"></script>
 
-	<canvas id="preview"></canvas>
-</body>
+		<script src="./js/img_transparent.js"></script>
+    </head>
+
+    <body>
+        <div id="wrap">
+            <div id="contents-wrap">
+                <header>
+                    <div id="header"></div>
+                </header>
+
+                <div class="column">
+                    <div class="title">
+                        <img src="../../img/tools_icon/picker.png">
+                        スポイト
+                    </div>
+					<p class="summary">画像から色を取得します。</p>
+					
+					<div class="app-area" id="app-area-id">
+						<input type="file" id="imgfile" accept=".png, .jpg, .jpeg"><br>
+
+						<script>
+							// input要素
+							const fileInput = document.getElementById('imgfile');
+							// changeイベントで呼び出す関数
+							const handleFileSelect = () => {
+								const files = fileInput.files;
+								for (let i = 0; i < files.length; i++) {
+									console.log(files[i]+"\n");　// 1つ1つのファイルデータはfiles[i]で取得できる
+									previewFile(files[i]);
+								}
+							}
+							// ファイル選択時にhandleFileSelectを発火
+							fileInput.addEventListener('change', handleFileSelect);
+						</script>
+
+						<canvas id="preview"></canvas>
+					</div>
+                </div>
+
+            </div>
+        </div>
+
+        <footer class="footer_class">
+            <div id="footer"></div>
+        </footer>
+    </body>
 </html>
